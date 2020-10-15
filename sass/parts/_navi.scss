@@ -1,0 +1,26 @@
+.global-navi {
+  max-width: 960px;
+  margin: 10px auto 30px;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+
+  // .menu__item
+  &__item {
+    width: 25%;
+    text-align: center;
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: all .75s;
+
+  &:hover {
+    color: #0b0138;
+    text-decoration: underline;
+  }
+}

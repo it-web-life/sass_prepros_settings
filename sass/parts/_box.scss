@@ -1,0 +1,57 @@
+.box {
+  width: 100%;
+
+  // box__frame
+  &__frame {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .box__text {
+        margin-right: 20px;
+      }
+    }
+
+    &:nth-child(odd) {
+      .box__text {
+        margin-left: 20px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: block;
+
+      &:nth-child(even), &:nth-child(odd) {
+        .box__text {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // box__image
+  &__image {
+    width: 50%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  // box__image-item
+  &__image-item {
+    max-width: 100%;
+  }
+
+  // box__text
+  &__text {
+    width: 50%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+}
